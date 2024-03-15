@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import '../App.css'
 
 export default function HomePage() {
+  document.title = "Главная";
     return (
       <>
       <Header />
