@@ -30,6 +30,7 @@ export default function BasketPage() {
           }
         };
         fetchData();
+      // eslint-disable-next-line
       }, []); 
 
     const handleClick = async (id) => {
