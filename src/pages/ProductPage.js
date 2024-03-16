@@ -9,7 +9,6 @@ import '../styles/product.css'
 export default function ProductPage() {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
-  const [data1, setData1] = useState([]);
   const [loading, setLoading] = useState(false);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
@@ -61,10 +60,6 @@ export default function ProductPage() {
         setLoading(true);
         const response = await fetch(`//${serverUrl}/api/product/item.php?id=${productid}`);
         const jsonData = await response.json();
-        setData(jsonData.data);
-        const response1 = await fetch(`//${serverUrl}/api/rews/info.php?id=${productid}`);
-        const jsonData1 = await response1.json();
-        setData1(jsonData1.data);
         window.scrollTo(0, 0)
         if(jsonData.status){ setData(jsonData.data);}else{ navigate('/404');}
       } catch (error) { console.log(error);} finally { setLoading(false);}
@@ -115,7 +110,7 @@ export default function ProductPage() {
           <hr />
           <div className="duo b">
             <div className='rews'><span><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </span> 
-            <span id="revs">{data1.length} отзывов</span></div>    
+            <span id="revs"> отзывов</span></div>    
             <div className='mini'> Артикул товара: {data.id}</div>
           </div>
           <div className="duo">

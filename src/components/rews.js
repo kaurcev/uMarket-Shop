@@ -20,7 +20,7 @@ export default function RewsPanel() {
             const jsonData = await response.json();
             setData(jsonData.data);
             window.scrollTo(0, 0)
-            if(jsonData.status){ setData(jsonData.data);}else{ navigate('/404');}
+            setData(jsonData.data);
         } catch (error) { console.log(error);} finally { setLoading(false);}
         };
         fetchData();
