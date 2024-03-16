@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import serverUrl from "../config";
+import '../styles/basket.css'
 
 export default function BasketPage() {
   document.title = "Страница не найдена";
@@ -57,7 +58,7 @@ export default function BasketPage() {
     return (
       <>
     <Header />
-    <main>
+    <main className='basket'>
       <h1>Корзина</h1>
       <div className='duo'>
       <div className='spisok'>

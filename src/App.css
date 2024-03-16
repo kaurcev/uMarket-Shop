@@ -100,56 +100,6 @@ main hr{
   width: 100%;
 }
 
-main .spisok{
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-main .spisok .desc{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-main .spisok button{
-  background-color: rgb(255, 0, 76);
-  border: none;
-  color: #fff;
-  border-radius: 8px;
-  padding: 8px 10px;
-}
-main .spisok .cart{
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 10px;
-}
-main .spisok .cart img{
-  object-fit: cover;
-  object-position: 50% 50%;
-  border-radius: 15px;
-  border: 2px solid transparent;
-  width: 240px;
-  max-height: 240px;
-}
-
-main .spisok .cart .panel{
-  display: flex;
-  gap: 10px;
-}
-
-main .panelinfo{
-  width: 400px;
-}
-
-
-
 @keyframes shine {
   to {
     background-position-x: -200%;
