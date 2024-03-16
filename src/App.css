@@ -79,6 +79,9 @@ main .duo.r{
 main .duo *{
   width: 100%;
 }
+main .duo img{
+  width: 400px;
+}
 main .mini{
   font-size: 12px;
   opacity: 0.6;
@@ -90,6 +93,11 @@ main .full{
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+
 
 @media (max-width: 899px) {
   body{

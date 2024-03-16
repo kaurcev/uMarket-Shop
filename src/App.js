@@ -7,6 +7,7 @@ import StartProvidePage from './pages/StartProvidePage';
 import PrivacyPage from './pages/PrivacyPage';
 import UseTermsPage from './pages/UseTermsPage';
 import ApplicationPage from './pages/ApplicationPage';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/auth" element={<AuthPage />} />
+        <Route exact path="/main" element={<MainPage />} />
         <Route exact path="/start" element={<StartProvidePage />} />
         <Route exact path="/privacy" element={<PrivacyPage />} />
         <Route exact path="/terms" element={<UseTermsPage />} />
