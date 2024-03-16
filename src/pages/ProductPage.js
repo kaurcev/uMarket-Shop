@@ -61,6 +61,7 @@ export default function ProductPage() {
         setLoading(true);
         const response = await fetch(`//${serverUrl}/api/product/item.php?id=${productid}`);
         const jsonData = await response.json();
+        setData(jsonData.data);
         const response1 = await fetch(`//${serverUrl}/api/rews/info.php?id=${productid}`);
         const jsonData1 = await response1.json();
         setData1(jsonData1.data);
