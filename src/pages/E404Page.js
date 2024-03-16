@@ -1,9 +1,13 @@
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import img404 from '../img/404.png'
 
 export default function E404Page() {
   document.title = "Страница не найдена";
+  useEffect(() => {
+		window.scrollTo(0, 0)
+	  }, [])
     return (
       <>
        <main>

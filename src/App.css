@@ -189,13 +189,16 @@ form.login-form{
     max-width: 300px;
     width: 100%;
   }
+  main img{
+    max-width: 200px;
+    width: 100%;
+  }
   main .duo{
     flex-direction: column;
   }
   main .duo.r{
     flex-direction: column;
   }
-
   footer .footer{
     flex-wrap: wrap;
     align-items: center;
