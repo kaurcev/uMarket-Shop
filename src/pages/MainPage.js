@@ -20,7 +20,7 @@ export default function MainPage() {
       const fetchData = async () => {
         try {
           setLoading(true);
-          const response = await fetch(`//${serverUrl}/api/Product/all.php`);
+          const response = await fetch(`//${serverUrl}/api/product/all.php`);
           const jsonData = await response.json();
           setData(jsonData.data);
           window.scrollTo(0, 0);

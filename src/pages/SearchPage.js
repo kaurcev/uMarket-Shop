@@ -18,7 +18,7 @@ export default function SearchPage() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`//${serverUrl}/api/Product/search.php?search=${search}`);
+        const response = await fetch(`//${serverUrl}/api/product/search.php?search=${search}`);
         const jsonData = await response.json();
         setData(jsonData.data);
         window.scrollTo(0, 0);
