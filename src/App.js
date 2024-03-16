@@ -11,6 +11,7 @@ import MainPage from './pages/MainPage';
 import Logout from './pages/Logout';
 import SearchPage from './pages/SearchPage';
 import BasketPage from './pages/BasketPage';
+import ProductPage from './pages/ProductPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/terms" element={<UseTermsPage />} />
         <Route exact path="/logout" element={<Logout />} />
         <Route exact path="/search" element={<SearchPage />} />
+        <Route exact path="/product" element={<ProductPage />} />
         <Route exact path="/basket" element={<BasketPage />} />
         <Route exact path="/application" element={<ApplicationPage />} />
         <Route path="*" element={<E404Page />} />

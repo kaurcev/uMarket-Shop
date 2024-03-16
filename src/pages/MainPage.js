@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import StoksPanel from '../components/stocks';
 import Prodoload from '../components/prodoload';
 import serverUrl from "../config";
+import '../styles/productpanel.css'
 
 export default function MainPage() {
   document.title = "Главная";
