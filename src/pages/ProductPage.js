@@ -120,7 +120,7 @@ export default function ProductPage() {
           <div className="duo">
             <div className="photoitem">
               <div className="cart">
-                <img src={`//backend/img/${data.img}`} alt={data.name}/>
+                <img src={`//${serverUrl}/img/${data.img}`} alt={data.name}/>
               </div>
                 </div>
               <div className="asd">
