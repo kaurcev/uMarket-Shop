@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from "../components/Footer";
 import serverUrl from "../config";
+import auth from '../img/auth.png'
 
 export default function AuthPage() {
   document.title = "Авторизация";
@@ -44,16 +45,18 @@ export default function AuthPage() {
       <main className="centered">
         {localStorage.getItem('token') ? (
           <>
+            <img src={auth} alt="Картинка авторизации" />
             <p>Вы уже авторизированы</p>
             <p><Link className='bt' to="/main">Перейти</Link></p>
           </>
         ) : (
           <>
+            
             <form className="login-form" onSubmit={submitHandler}>
               <h2>Авторизация</h2>
-              <p>Логин</p>
+              <p className='mini'>Логин</p>
               <input type="text" value={username} onChange={usernameHandler} />
-              <p>Пароль</p>
+              <p className='mini'>Пароль</p>
               <input type="password" value={password} onChange={passwordHandler} />
               <p><button>Войти</button></p>
             </form>
