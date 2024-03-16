@@ -1,14 +1,13 @@
 import './stocks.css';
 import React, { useState, useEffect } from 'react';
 import serverUrl from "../config";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
 export default function RewsPanel() {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const productid = searchParams.get('id');
-    const navigate = useNavigate();
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
