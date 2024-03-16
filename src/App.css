@@ -87,6 +87,10 @@ main .duo *{
 
 
 @media (max-width: 899px) {
+  body{
+    padding: 50px 0px 50px 0px;
+    font-size: 14px;
+  }
   main.centered img{
     max-width: 300px;
     width: 100%;
