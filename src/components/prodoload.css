@@ -25,3 +25,10 @@ width: 80%;
 min-height: 16px;
 height: 200px;
 }
+
+@media (max-width: 899px) {
+    .load .img {
+        min-height: 16px;
+        height: 180px;
+    }
+}

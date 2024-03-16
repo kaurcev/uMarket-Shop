@@ -8,6 +8,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import UseTermsPage from './pages/UseTermsPage';
 import ApplicationPage from './pages/ApplicationPage';
 import MainPage from './pages/MainPage';
+import Logout from './pages/Logout';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/start" element={<StartProvidePage />} />
         <Route exact path="/privacy" element={<PrivacyPage />} />
         <Route exact path="/terms" element={<UseTermsPage />} />
+        <Route exact path="/logout" element={<Logout />} />
         <Route exact path="/application" element={<ApplicationPage />} />
         <Route path="*" element={<E404Page />} />
       </Routes>
