@@ -11,19 +11,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-      --color-font: #ffffff;
-      --color-body-bg: #1e1e1e;
-      --color-body-header: #2d2d2d;
-      --akcent: #4E50FF;
-      --color-prf: #353535;
-      --color-prf2: #555555;
+    --color-font: #212121;
+    --color-body-bg: #ffffff;
+    --color-body-header: #ffffff;
+    --color-prf: #f2f4f8;
+    --color-prf2: #c4c4c4;
+    --akcent: #4E50FF;
+    --red: #db0049;
     }
-  .logo{
-      filter: saturate(0);
-  }
-  .logo img{
-      filter: invert(1);
-  }
 }
 
 *{
