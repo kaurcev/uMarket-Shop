@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import { Link,useNavigate } from 'react-router-dom';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -97,19 +96,6 @@ const Profile = () => {
       </div>
       <h3>Место доставки</h3>
       <p className='mini'>Рекомендуется указывать Ваше домашнее положение</p>
-			<YMaps>
-				<Map
-				className="maps"
-					defaultState={{
-					center: [`${data.latitude}`, `${data.longitude}`],
-					zoom: 18,
-					controls: ["zoomControl", "fullscreenControl"],
-					}}
-					modules={["control.ZoomControl", "control.FullscreenControl"]}
-				>
-					<Placemark defaultGeometry={[`${data.latitude}`, `${data.longitude}`]} />
-				</Map>
-			</YMaps> 
       <h3>Ваша активность</h3>
       <p className='mini'>Обратите внимание, что наша система авторизации поддерживает единую авторизацию (Только через одно устройство)</p>
       <div className='usercontroll'>
