@@ -6,6 +6,7 @@ import E404Page from './pages/E404Page';
 import StartProvidePage from './pages/StartProvidePage';
 import PrivacyPage from './pages/PrivacyPage';
 import UseTermsPage from './pages/UseTermsPage';
+import ApplicationPage from './pages/ApplicationPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/start" element={<StartProvidePage />} />
         <Route exact path="/privacy" element={<PrivacyPage />} />
         <Route exact path="/terms" element={<UseTermsPage />} />
+        <Route exact path="/application" element={<ApplicationPage />} />
         <Route path="*" element={<E404Page />} />
       </Routes>
     </Router>
