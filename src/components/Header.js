@@ -86,7 +86,7 @@ export default function Header() {
                 <nav>
                 {localStorage.getItem('token') ? (
                 <>
-                <Link to="/">
+                <Link to="/main">
                     <i className="fa fa-home" aria-hidden="true"></i>
                     <span>Главная</span>
                     </Link>

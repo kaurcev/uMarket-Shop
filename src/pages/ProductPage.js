@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import RewsPanel from '../components/rews';
 import serverUrl from "../config";
 import '../styles/product.css'
 
@@ -112,8 +113,9 @@ export default function ProductPage() {
           <h2>{data.name}</h2>
           <hr />
           <div className="duo b">
-            <div className='rews'><span><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </span> <span id="revs">{data1.length} отзывов</span> <span>Поделиться</span></div>    
-            <div> Артикул товара: {data.id}</div>
+            <div className='rews'><span><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i> </span> 
+            <span id="revs">{data1.length} отзывов</span></div>    
+            <div className='mini'> Артикул товара: {data.id}</div>
           </div>
           <div className="duo">
             <div className="photoitem">
@@ -149,23 +151,8 @@ export default function ProductPage() {
               <h4>Описание</h4>
               <p>{data.description}</p>
               <h4>Отзывы</h4>
-              <div className="duo b">
-                <div className="rev">
-                  {
-                  data1.map((item) => (
-                  <div className='body'>
-                    <div>
-                        <h4>{item.username}</h4>
-                        <span>
-                            {
-                            Array.from({ length: item.coll }, (_, index) => (
-                            <i key={index} className="fa fa-star gold" aria-hidden="true"></i>
-                            ))}
-                          </span>
-                    </div>
-                    <p>{item.message}</p>
-                  </div>))}
-                </div>
+              <div className="reves">
+               <RewsPanel />
                 <div className='postav'>
                   <h5>Информация о поставщике</h5>
                   <p>{data.provname}</p>

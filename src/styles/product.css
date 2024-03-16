@@ -1,6 +1,7 @@
 .product .rews{
     display: flex;
     gap: 5px;
+    margin-bottom: 20px;
 }
 main.product .duo{
     gap: 20px;
@@ -16,11 +17,13 @@ main.product .duo{
     min-height: 55vh;
     border-radius: 15px;
     scroll-snap-type: x mandatory;
-    width: 100%;
+    flex-grow: 2;
     margin-bottom: 10px;
-  }
+    position: relative;
+    overflow: hidden;
+}
   
-  .product .photoitem .cart {
+.product .photoitem .cart {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -33,22 +36,28 @@ main.product .duo{
     text-decoration: none;
     color: var(--color-font);
     height: 55vh;
-    background: #f2f4f8;
-  }
+}
 
 .product .photoitem .cart img{
-    height: 100%;
-  }
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 15px;
+    border: 2px solid transparent;  
+    transition: transform 0.3s ease;
+}
+.product .photoitem .cart img:hover{
+    transform: scale(1.2);
+}
   
-  .product .asd {
+.product .asd {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     height: max-content;
-  }
-  
-  .product .panel {
+    flex-grow: 1;
+}
+.product .panel {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -56,33 +65,32 @@ main.product .duo{
     box-shadow: 0 4px 10px 0 #0000ff59;
     padding: 20px;
     border-radius: 13px;
-    min-width: 400px;
+    max-width: 400px;
     min-height: 170px;
     justify-content: space-between;
     margin-bottom: 30px;
     background-color: var(--color-body-header);
-  }
-  
-  .product .panel button {
+}
+.product .panel button {
     background-color:  var(--akcent);
     border: none;
     color: #fff;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
-  }
-  .product .rev{
+}
+.product .rev{
     width: 100%;
-  }
+}
 
-  .product .body {
+.product .body {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #000;
     width: 100%;
     margin-bottom: 10px;
-  }
-  .product .postav {
+}
+.product .postav {
     background-color: var(--akcent);
     width: 400px;
     border-radius: 10px;
@@ -90,4 +98,37 @@ main.product .duo{
     padding: 10px;
     color: #fff;
     height: fit-content;
-  }
+}
+.product .fstart{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.reves{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+@media (max-width: 899px) {
+    .reves{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+.asd{
+    width: 100%;
+}
+.rev .duo.b.fstart{
+    flex-direction: column-reverse;
+}
+.product .postav {
+    width: 100%;
+}
+.product .duo.b{
+    flex-direction: row;
+    align-items: baseline;
+}
+.product .body .duo.b{
+    flex-direction: row;
+}
+}

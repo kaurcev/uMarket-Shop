@@ -18,6 +18,8 @@
     padding: 10px;
     border-radius: 10px;
     gap: 5px;
+    position: relative;
+    overflow: hidden;
 }
   
   
@@ -55,6 +57,11 @@
     border: 2px solid transparent;
     width: 100%;
     max-height: 240px;
+    transition: transform 0.3s ease;
+}
+
+.productpanel .cart img:hover{
+    transform: scale(1.01);
 }
 .productpanel .cart p.mini{
     display: -webkit-box;
