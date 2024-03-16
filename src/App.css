@@ -77,9 +77,19 @@ main .duo.r{
   flex-direction: row-reverse;
 }
 main .duo *{
-  width: 50%;
+  width: 100%;
 }
-
+main .mini{
+  font-size: 12px;
+  opacity: 0.6;
+}
+main .full{
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (max-width: 899px) {
   body{
