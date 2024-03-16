@@ -63,12 +63,12 @@ export default function PostavPage(){
             <div className='navigate'>
             <Link className='bt' to="/profile">Общие данные</Link>
             <Link className='bt' to="/basket">Корзина</Link>
-            {data1.role === 2 ?(
+            {data1.role === "2" ?(
             <>
               <Link className='bt' to="/postavs">Панель поставщика</Link>
             </>
             ) : null}
-            {data1.role === 3 ?(
+            {data1.role === "3" ?(
             <>
               <Link className='bt' to="/admin">Панель администратора</Link>
             </>

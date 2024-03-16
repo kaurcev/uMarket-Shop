@@ -76,12 +76,12 @@ const Profile = () => {
             <div className='navigate'>
             <Link className='bt' to="/profile">Общие данные</Link>
             <Link className='bt' to="/basket">Корзина</Link>
-            {data.role === 2 ? (
+            {data.role === "2" ? (
             <>
               <Link className='bt' to="/postavs">Панель поставщика</Link>
             </>
             ) : null}
-            {data.role === 3 ? (
+            {data.role === "3" ? (
             <>
               <Link className='bt' to="/admin">Панель администратора</Link>
             </>
