@@ -95,10 +95,41 @@ main .full{
 }
 
 
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
 
+.productpanel{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 25px;
+}
 
+.productpanel .cart{
+  width: 45%;
+  max-width: 250px;
+  text-decoration: none;
+  color: var(--color-font);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 5px;
+}
 
+.cart .pan{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
+/*#region мобильный адаптив*/
 @media (max-width: 899px) {
   body{
     padding: 50px 0px 50px 0px;
@@ -122,3 +153,4 @@ main .full{
     text-align: center;
   }
 }
+/*#endregion Мобильный адаптив*/

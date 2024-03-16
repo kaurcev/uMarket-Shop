@@ -37,3 +37,12 @@
 .stocks .cart img{
     width: 250px;
 }
+
+@media (max-width: 899px) {
+    .stocks{
+        min-height: 25vh;
+    }
+    .stocks .cart img{
+        display: none;
+    }
+}
