@@ -33,6 +33,7 @@
   font-style: normal;
   text-decoration: none;
   outline: none;
+  text-decoration: none;
 }
 
 html, body{
@@ -44,6 +45,10 @@ main{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 10px;
+}
+a{
+  color: var(--color-font);
 }
 main.centered{
   display: flex;
@@ -69,19 +74,34 @@ main a.bt, main button{
 main .duo{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
 }
 main .duo.r{
-  display: flex;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
+}
+main .duo *{
+  width: 50%;
 }
 
 
 @media (max-width: 899px) {
+  main.centered img{
+    max-width: 300px;
+    width: 100%;
+  }
+  main .duo{
+    flex-direction: column;
+  }
+  main .duo.r{
+    flex-direction: column;
+  }
 
+  footer .footer{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
