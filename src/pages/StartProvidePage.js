@@ -1,8 +1,12 @@
+import React, { useEffect } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function StartProvidePage() {
   document.title = "Как стать поставщиком";
+  useEffect(() => {
+		window.scrollTo(0, 0)
+	  }, [])
     return (
       <>
       <Header />
