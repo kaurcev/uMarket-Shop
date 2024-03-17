@@ -19,6 +19,7 @@ import ProdoEditPage from './pages/ProdoEditPage';
 import ProdoAddPage from './pages/ProdoAddPage';
 import Signup from './pages/SignupPage';
 import PostavPage from './pages/PostavPage';
+import RevPage from './pages/RevPage';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route exact path="/postavs" element={<PostavPage />} />
         <Route exact path="/postavs/edit" element={<ProdoEditPage />} />
         <Route exact path="/postavs/add" element={<ProdoAddPage />} />
+        <Route exact path="/postavs/comment" element={<RevPage />} />
         <Route exact path="/signup" element={<Signup />} />
         <Route exact path="/product" element={<ProductPage />} />
         <Route exact path="/basket" element={<BasketPage />} />

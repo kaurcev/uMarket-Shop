@@ -66,8 +66,8 @@ export default function PostavPage(){
             <hr/>
             <div className="productpanel">
             <Prodoload />
-			<Prodoload />
-			<Prodoload />
+			      <Prodoload />
+			      <Prodoload />
             </div>
             </div>
       </div>
@@ -83,6 +83,7 @@ export default function PostavPage(){
               <Link className='bt' to="/postavs">Панель поставщика</Link>
               <hr/>
               <Link className='bt' to='/postavs/add'>Добавить товар</Link>
+              <Link className='bt' to='/postavs/comment'>Отзывы о товарах</Link>
             </>
             ) : null}
             {data1.role === "3" ?(

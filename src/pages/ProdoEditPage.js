@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import serverUrl from "../config";
 
 export default function ProdoEditPage() {
+  const navigate = useNavigate();
   const [nameprodo, setNameprodo] = useState('');
   const [descriptionprodo, setDescriptionprodo] = useState('');
   const [costeprodo, setCosteprodo] = useState('');
@@ -13,6 +14,7 @@ export default function ProdoEditPage() {
   const [data1, setData1] = useState([]);
   const [loading, setLoading] = useState(false);
   const location = useLocation();
+  const params = new URLSearchParams();
   const searchParams = new URLSearchParams(location.search);
   const productid = searchParams.get('id');
 
@@ -38,7 +40,6 @@ export default function ProdoEditPage() {
   };
 
   const SigninRequest = async () => {
-    const params = new URLSearchParams();
     params.append('product', productid);
     params.append('name', nameprodo);
     params.append('desc', descriptionprodo);
@@ -95,6 +96,24 @@ export default function ProdoEditPage() {
     // eslint-disable-next-line
   }, []); // Пустой массив зависимостей
 
+  const handleClick = async (id) => {
+    try {
+      setLoading(true);
+      params.append('id', id);
+      params.append('token', localStorage.getItem('token'));
+      const response = await fetch(`//${serverUrl}/api/provider/delete.php?${params.toString()}`);
+      const jsonData = await response.json();
+      if (jsonData.status) {
+        navigate('/postavs')
+      }
+    } catch (error) {
+      alert(`501 ошибка: ${error.message}`);
+      console.log(error.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <>
       <Header />
@@ -132,6 +151,7 @@ export default function ProdoEditPage() {
                   <input placeholder='none.png' defaultValue={data.img} onChange={imgprodoHandler} />
                   <p className='flex'><button className='red' type="reset">Отменить изменения</button><button>Сохранить изменения</button></p>
                 </form>
+                <button onClick={() => handleClick(productid)} disabled={loading}>Удалить товар</button>
               </div>
             </div>
           </>

@@ -123,6 +123,15 @@ main .navigate{
 main .carted{
   width: 100%;
 }
+
+main .comment {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 @keyframes shine {
   to {
     background-position-x: -200%;
