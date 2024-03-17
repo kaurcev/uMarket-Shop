@@ -131,4 +131,8 @@ main.product .duo{
 .product .body .duo.b{
     flex-direction: row;
 }
+.product .asd button {
+    width: 100%;
+    max-width: none;
+  }
 }

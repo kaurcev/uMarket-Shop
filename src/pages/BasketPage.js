@@ -78,10 +78,10 @@ export default function BasketPage() {
                 <h3>{item.coste}</h3>
                 <h3>{item.count}</h3>
                 <div className='panel'>
-                  <button onClick={() => handleClick(item.id)} disabled={loading}>
+                  <button className='red' onClick={() => handleClick(item.id)} disabled={loading}>
                     Удалить
                   </button>
-                  <button onClick={() => productOpen(item.product)} disabled={loading}>
+                  <button className='op' onClick={() => productOpen(item.product)} disabled={loading}>
                     Открыть товар
                   </button>
                 </div>

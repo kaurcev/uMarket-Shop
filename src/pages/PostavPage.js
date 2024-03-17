@@ -57,8 +57,8 @@ export default function PostavPage(){
 			<>
       <div className='caca'>
       <div className='navigate'>
-            <Link className='bt' to="/profile">Общие данные</Link>
-            <Link className='bt' to="/basket">Корзина</Link>
+            <Link className='bt op' to="/profile">Общие данные</Link>
+            <Link className='bt op' to="/basket">Корзина</Link>
       </div>
       <div className='carted'>
             <h3 className="pagename">Ваши товары</h3>
@@ -76,19 +76,19 @@ export default function PostavPage(){
           <>
           <div className='caca'>
             <div className='navigate'>
-            <Link className='bt' to="/profile">Общие данные</Link>
-            <Link className='bt' to="/basket">Корзина</Link>
+            <Link className='bt op' to="/profile">Общие данные</Link>
+            <Link className='bt op' to="/basket">Корзина</Link>
             {data1.role === "2" ?(
             <>
-              <Link className='bt' to="/postavs">Панель поставщика</Link>
+              <Link className='bt op' to="/postavs">Панель поставщика</Link>
               <hr/>
-              <Link className='bt' to='/postavs/add'>Добавить товар</Link>
-              <Link className='bt' to='/postavs/comment'>Отзывы о товарах</Link>
+              <Link className='bt op' to='/postavs/add'>Добавить товар</Link>
+              <Link className='bt op' to='/postavs/comment'>Отзывы о товарах</Link>
             </>
             ) : null}
             {data1.role === "3" ?(
             <>
-              <Link className='bt' to="/admin">Панель администратора</Link>
+              <Link className='bt op' to="/admin">Панель администратора</Link>
             </>
             ) : null}
             </div>

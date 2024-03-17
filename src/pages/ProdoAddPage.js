@@ -90,16 +90,16 @@ export default function ProdoAddPage() {
           <>
             <div className='caca'>
               <div className='navigate'>
-                <Link className='bt' to="/profile">Общие данные</Link>
-                <Link className='bt' to="/basket">Корзина</Link>
+                <Link className='bt op' to="/profile">Общие данные</Link>
+                <Link className='bt op' to="/basket">Корзина</Link>
                 {data1.role === "2" ? (
                   <>
-                    <Link className='bt' to="/postavs">Панель поставщика</Link>
+                    <Link className='bt op' to="/postavs">Панель поставщика</Link>
                   </>
                 ) : null}
                 {data1.role === "3" ? (
                   <>
-                    <Link className='bt' to="/admin">Панель администратора</Link>
+                    <Link className='bt op' to="/admin">Панель администратора</Link>
                     </>
                 ) : null}
               </div>

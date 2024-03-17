@@ -124,23 +124,23 @@ export default function ProdoEditPage() {
           <>
             <div className='caca'>
               <div className='navigate'>
-                <Link className='bt' to="/profile">Общие данные</Link>
-                <Link className='bt' to="/basket">Корзина</Link>
+                <Link className='bt op' to="/profile">Общие данные</Link>
+                <Link className='bt op' to="/basket">Корзина</Link>
                 {data1.role === "2" ? (
                   <>
-                    <Link className='bt' to="/postavs">Панель поставщика</Link>
+                    <Link className='bt op' to="/postavs">Панель поставщика</Link>
                   </>
                 ) : null}
                 {data1.role === "3" ? (
                   <>
-                    <Link className='bt' to="/admin">Панель администратора</Link>
+                    <Link className='bt op' to="/admin">Панель администратора</Link>
                   </>
                 ) : null}
                 </div>
               <div className='carted'>
                 <h3 className="pagename">Редактирование товара <span className='mini'>{data.name}</span></h3>
                 <hr />
-                <form onSubmit={submitHandler}>
+                <form className='prodo' onSubmit={submitHandler}>
                   <p className='mini'>Наименование</p>
                   <input placeholder='Дайте название вашему товару!' defaultValue={data.name} onChange={nameprodoHandler} />
                   <p className='mini'>Описание</p>
@@ -149,9 +149,9 @@ export default function ProdoEditPage() {
                   <input placeholder='Дайте разумную цену вашему товару!' type="number" defaultValue={data.coste} onChange={costeprodoHandler} />
                   <p className='mini'>Картинка</p>
                   <input placeholder='none.png' defaultValue={data.img} onChange={imgprodoHandler} />
-                  <p className='flex'><button className='red' type="reset">Отменить изменения</button><button>Сохранить изменения</button></p>
+                  <p className='flex'><button className='op' type="reset">Отменить изменения</button><button>Сохранить изменения</button></p>
                 </form>
-                <button onClick={() => handleClick(productid)} disabled={loading}>Удалить товар</button>
+                <button className='red' onClick={() => handleClick(productid)} disabled={loading}>Удалить товар</button>
               </div>
             </div>
           </>

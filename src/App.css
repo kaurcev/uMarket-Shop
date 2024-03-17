@@ -29,6 +29,7 @@
   text-decoration: none;
   outline: none;
   text-decoration: none;
+  font-size: 14px;
 }
 
 html, body{
@@ -66,6 +67,21 @@ main a.bt, main button{
   max-width: 200px;
   text-align: center;
 }
+
+button.red{
+  background-color: rgb(255, 0, 76);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+form.prodo{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
 main .duo{
   display: flex;
   flex-direction: row;
@@ -100,6 +116,12 @@ main hr{
   width: 100%;
 }
 
+main input, main textarea{
+  padding: 7px 12px;
+  border: 2px solid var(--color-prf2);
+  border-radius: 8px;
+}
+
 
 main .caca .duo{
   flex-direction: row;
@@ -109,6 +131,10 @@ main .caca{
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+main .flex{
+  display: flex;
+  gap: 5px;
 }
 main .navigate{
   display: flex;
@@ -130,6 +156,11 @@ main .comment {
   border: 1px solid #000;
   width: 100%;
   margin-bottom: 10px;
+}
+
+main .bt.op, main button.op{
+  background-color: #DBDCFF;
+  color: var(--akcent);
 }
 
 @keyframes shine {
@@ -162,8 +193,19 @@ form.login-form{
   main .duo.r{
     flex-direction: column;
   }
+  main input, main textarea{
+    width: 100%;
+  }
+  main textarea{
+    min-height: 20vh;
+  }
   .rews{
     display: flex;
+  }
+  form.prodo button{
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
   }
   main .navigate{
     display: flex;

@@ -134,7 +134,7 @@ export default function ProductPage() {
                     </>
                     )}
                 </div>
-                <button className="btop">Купить в 1 клик</button>
+                <button className="bt op">Купить в 1 клик</button>
                 <div>
                   <h5>Часто задаваемые вопросы</h5>
                   <div className="duo">
