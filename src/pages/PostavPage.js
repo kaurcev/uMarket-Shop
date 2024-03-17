@@ -55,7 +55,22 @@ export default function PostavPage(){
       <main className='profile'>
 		{loading ? (
 			<>
-			Загрузка
+      <div className='caca'>
+      <div className='navigate'>
+            <Link className='bt' to="/profile">Общие данные</Link>
+            <Link className='bt' to="/basket">Корзина</Link>
+      </div>
+      <div className='carted'>
+            <h3 className="pagename">Ваши товары</h3>
+            <p className='mini'>Для перехода редактирования, просто нажмите на карточку с товаром</p>
+            <hr/>
+            <div className="productpanel">
+            <Prodoload />
+			<Prodoload />
+			<Prodoload />
+            </div>
+            </div>
+      </div>
 			</>
         ) : (
           <>
@@ -66,6 +81,8 @@ export default function PostavPage(){
             {data1.role === "2" ?(
             <>
               <Link className='bt' to="/postavs">Панель поставщика</Link>
+              <hr/>
+              <Link className='bt' to='/postavs/add'>Добавить товар</Link>
             </>
             ) : null}
             {data1.role === "3" ?(
@@ -75,8 +92,8 @@ export default function PostavPage(){
             ) : null}
             </div>
             <div className='carted'>
-              <Link className='button' to='/postavs/add'>Добавить товар</Link>
             <h3 className="pagename">Ваши товары</h3>
+            <p className='mini'>Для перехода редактирования, просто нажмите на карточку с товаром</p>
             <hr/>
             <div className="productpanel">
         {loading ? (

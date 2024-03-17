@@ -101,6 +101,28 @@ main hr{
 }
 
 
+main .caca .duo{
+  flex-direction: row;
+}
+
+main .caca{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+main .navigate{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: fit-content;
+  gap: 10px;
+  position: sticky;
+  top: 70px;
+  height: fit-content;
+}
+main .carted{
+  width: 100%;
+}
 @keyframes shine {
   to {
     background-position-x: -200%;
@@ -114,7 +136,7 @@ form.login-form{
 /*#region мобильный адаптив*/
 @media (max-width: 899px) {
   body{
-    padding: 50px 0px 50px 0px;
+    padding: 70px 0px 50px 0px;
     font-size: 14px;
   }
   main.centered img{
@@ -134,6 +156,26 @@ form.login-form{
   .rews{
     display: flex;
   }
+  main .navigate{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    position: inherit;
+  }
+  main .navigate a{
+    min-width: fit-content;
+  }
+  main .caca{
+    flex-direction: column;
+  }
+  main .usercontroll{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid;
+  }
+
   footer .footer{
     flex-wrap: wrap;
     align-items: center;

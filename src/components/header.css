@@ -116,4 +116,9 @@ header{
     header .header .mainpanel .search{
         height: 50px;
     }
+    header .header .mainpanel {
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+    }
   }
