@@ -106,7 +106,7 @@ const Profile = () => {
       <div>
       <form method="POST" action="https://yoomoney.ru/quickpay/confirm">
         <input type="hidden" name="receiver" value="4100110853907883"/>
-        <input type="hidden" name="label" value={data.username}/>
+        <input type="text" name="label" value={data.username} disabled/>
         <input type="hidden" name="quickpay-form" value="button"/>
         <input name="sum" value="2" data-type="number"/>
         <input type="hidden" name="successURL" value="https://api.umarketshop.site/api/pay/success.php"/>
