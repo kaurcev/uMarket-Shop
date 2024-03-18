@@ -102,6 +102,19 @@ const Profile = () => {
 			<p><i className="fa fa-paw" aria-hidden="true"></i> {data.useragent}</p>
       <p className="mini"><i className="fa fa-terminal" aria-hidden="true"></i> {data.ip}</p>
       </div>
+      <h3>Пополнение</h3>
+      <div>
+      <form method="POST" action="https://yoomoney.ru/quickpay/confirm">
+        <input type="hidden" name="receiver" value="4100110853907883"/>
+        <input type="hidden" name="label" value="$order_id"/>
+        <input type="hidden" name="quickpay-form" value="button"/>
+        <input name="sum" value="2" data-type="number"/>
+        <input type="hidden" name="successURL" value="https://api.umarketshop.site/pay/success"/>
+        <label><input type="radio" name="paymentType" value="PC"/>ЮMoney</label>
+        <label><input type="radio" name="paymentType" value="AC"/>Банковской картой</label>
+        <button>Перевести</button>
+      </form>
+      </div>
       </div>
       </div>
           </>

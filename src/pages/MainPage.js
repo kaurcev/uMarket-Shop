@@ -47,6 +47,7 @@ export default function MainPage() {
             <div className="productpanel">
             {loading ? (
               <>
+              { /* Тут заглушка, которая ожидает ответа от сервера*/}
               <Prodoload />
               <Prodoload />
               </>
