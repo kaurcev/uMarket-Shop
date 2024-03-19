@@ -97,7 +97,7 @@ const Profile = () => {
       </div>
       <hr/>
       <h3>юМаркет Кошелёк</h3>
-      <p>Ваш баланс: {data.money}</p>
+      <p>Ваш баланс: {data.money}₽</p>
       <p className='mini'>Ваш баланс пополнится окончательной суммой после вычета налогов</p>
       <div className='wallet'>
       <form className='payment' method="POST" action="https://yoomoney.ru/quickpay/confirm">
