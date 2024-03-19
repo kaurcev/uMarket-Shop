@@ -173,6 +173,42 @@ form.login-form{
   max-width: 400px;
 }
 
+main .wallet{
+  background-color: var(--akcent);
+  color: var(--color-prf);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+main .wallet .payment{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .wallet .payment p, main .wallet .payment h5{
+  margin: 0px;
+}
+main .wallet .payment input[name="sum"]{
+  width: 100px;
+  border: none;
+}
+main .wallet .payment img{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 100px;
+  max-height: 40px;
+}
+main .wallet .payment label{
+  display: flex;
+  align-items: center;
+}
+main .wallet button{
+  background-color: var(--color-prf);
+  color: var(--akcent);
+}
+
 /*#region мобильный адаптив*/
 @media (max-width: 899px) {
   body{
@@ -225,6 +261,17 @@ form.login-form{
     padding: 10px;
     border-radius: 10px;
     border: 2px solid;
+  }
+  main .wallet{
+    background-color: var(--akcent);
+    color: var(--color-prf);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: none;
+  }
+  main .wallet button{
+    max-width: none;
   }
 
   footer .footer{

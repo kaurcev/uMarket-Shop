@@ -3,6 +3,8 @@ import { Link,useNavigate } from 'react-router-dom';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import serverUrl from "../config";
+import iomoney from '../img/iomoney.svg'
+import creditcard from '../img/creditcard.svg'
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -89,10 +91,29 @@ const Profile = () => {
             </div>
             <div className='carted'>
 			<h3>{data.username}</h3>
-      <hr/>
       <div className='duo'>
       <p className="mini">Аккаунт создан: {data.created}</p>
       <p className="mini" onClick={() => geopos()}><i className="fa fa-map-marker" aria-hidden="true"></i> Обновить геопозицию</p>
+      </div>
+      <hr/>
+      <h3>юМаркет Кошелёк</h3>
+      <p className='mini'>Ваш баланс пополнится окончательной суммой после вычета налогов</p>
+      <div className='wallet'>
+      <form className='payment' method="POST" action="https://yoomoney.ru/quickpay/confirm">
+        <input type="hidden" name="receiver" value="4100110853907883"/>
+        <input type="hidden" name="label" defaultValue={data.username} />
+        <input type="hidden" name="quickpay-form" value="button"/>
+        <h5 className='mini'>Сумма поплнения</h5>
+        <input name="sum" defaultValue="2" data-type="number"/>
+        <input type="hidden" name="successURL" value="https://umarketshop.site/pay/success"/>
+        <h5 className='mini'>Способ пополнения</h5>
+        <div className='duo'>
+        <label><input type="radio" name="paymentType" value="PC"/><img src={iomoney} alt='юmoney' /></label>
+        <label><input type="radio" name="paymentType" value="AC"/><img src={creditcard} alt='Банковская карта'/></label>
+        </div>
+        <p className='mini'>ЮMoney не берёт коммисию. Её может взять банк</p>
+        <button>Пополнить</button>
+      </form>
       </div>
       <h3>Место доставки</h3>
       <p className='mini'>Рекомендуется указывать Ваше домашнее положение</p>
@@ -101,19 +122,6 @@ const Profile = () => {
       <div className='usercontroll'>
 			<p><i className="fa fa-paw" aria-hidden="true"></i> {data.useragent}</p>
       <p className="mini"><i className="fa fa-terminal" aria-hidden="true"></i> {data.ip}</p>
-      </div>
-      <h3>Пополнение</h3>
-      <div>
-      <form method="POST" action="https://yoomoney.ru/quickpay/confirm">
-        <input type="hidden" name="receiver" value="4100110853907883"/>
-        <input type="text" name="label" defaultValue={data.username} />
-        <input type="hidden" name="quickpay-form" value="button"/>
-        <input name="sum" value="2" data-type="number"/>
-        <input type="hidden" name="successURL" value="https://api.umarketshop.site/api/pay/success.php"/>
-        <label><input type="radio" name="paymentType" value="PC"/>ЮMoney</label>
-        <label><input type="radio" name="paymentType" value="AC"/>Банковской картой</label>
-        <button>Перевести</button>
-      </form>
       </div>
       </div>
       </div>
