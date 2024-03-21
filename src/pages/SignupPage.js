@@ -28,7 +28,7 @@ export default function Signup() {
     const params = new URLSearchParams();
     params.append('username', username);
     params.append('password', password);
-    fetch(`//${serverUrl}/api/User/signup.php?${params.toString()}`)
+    fetch(`//${serverUrl}/api/user/signup.php?${params.toString()}`)
       .then(response => response.json())
       .then(data => {
         if (data.data.status) {
