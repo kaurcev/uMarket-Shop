@@ -59,6 +59,7 @@ export default function AuthPage() {
               <p className='mini'>Пароль</p>
               <input type="password" value={password} onChange={passwordHandler} />
               <p><button>Войти</button></p>
+              <p className='center'><Link to='/signup'>Ещё нет аккаунта</Link></p>
             </form>
           </>
         )}

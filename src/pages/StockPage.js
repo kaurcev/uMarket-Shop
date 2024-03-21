@@ -34,28 +34,9 @@ export default function StockPage() {
   return (
     <>
       <Header />
-      <div className="promo full">
-          {loading ? (
-            <>
-            <div className="cart load">
-              </div>
-            </>
-          ) : (
-            datas.map((item) => (        
-              <div key={item.id} className="cart" onClick={() => stockOpen(item.id)}>
-                <div>
-                  <h2>{item.name}</h2>
-                  <p>{item.description}</p>
-                  <p className="mini">{item.provider}</p>
-                  </div>
-                  <img src="/assets/img/min-logo.png" alt="" />
-              </div>
-            ))
-          )}
-        </div>
         <main>
           <h3>Проводимые акции</h3>
-          <div className='flex'>
+          <div className='flexcartpromo'>
           {loading ? (
             <>
             <div className="cart load">

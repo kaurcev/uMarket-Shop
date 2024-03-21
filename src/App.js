@@ -21,6 +21,8 @@ import Signup from './pages/SignupPage';
 import PostavPage from './pages/PostavPage';
 import RevPage from './pages/RevPage';
 import PayPage from './pages/PayPage';
+import PaymentsPage from './pages/PaymentsPage';
+import SecPage from './pages/SecPage';
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
         <Route exact path="/postavs/add" element={<ProdoAddPage />} />
         <Route exact path="/postavs/comment" element={<RevPage />} />
         <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/pay" element={<PaymentsPage />} />
+        <Route exact path="/banan" element={<SecPage />} />
         <Route exact path="/product" element={<ProductPage />} />
         <Route exact path="/pay/success" element={<PayPage />} />
         <Route exact path="/basket" element={<BasketPage />} />

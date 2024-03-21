@@ -149,6 +149,40 @@ main .navigate{
 main .carted{
   width: 100%;
 }
+main .flexcartpromo{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .cartpromo{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+main .cartpromo img{
+  max-width: 20%;
+}
+
+main .transactions{
+  max-height: 400px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+main .transactions .cart{
+  border-radius: 10px;
+  border: 2px solid;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+main .transactions .cart .big{
+  font-size: 24px;
+}
 
 main .comment {
   padding: 10px;
@@ -162,7 +196,9 @@ main .bt.op, main button.op{
   background-color: #DBDCFF;
   color: var(--akcent);
 }
-
+.product .asd .bt.op, .product .asd button.op{
+  min-width: 100%;
+}
 @keyframes shine {
   to {
     background-position-x: -200%;
@@ -207,6 +243,9 @@ main .wallet .payment label{
 main .wallet button{
   background-color: var(--color-prf);
   color: var(--akcent);
+}
+main p.center{
+  text-align: center;
 }
 
 /*#region мобильный адаптив*/
@@ -273,7 +312,12 @@ main .wallet button{
   main .wallet button{
     max-width: none;
   }
-
+  main .cartpromo{
+    justify-content: start;
+  }
+  main .cartpromo img{
+   display: none;
+  }
   footer .footer{
     flex-wrap: wrap;
     align-items: center;

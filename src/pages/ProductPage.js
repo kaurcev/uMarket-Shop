@@ -96,6 +96,34 @@ export default function ProductPage() {
   };
 
 
+  const payhandleClick = async () => {
+    try {
+      const params = new URLSearchParams();
+      params.append('money', data.coste);
+      params.append('postav', data.provname);
+      params.append('token', localStorage.getItem('token'));
+      const response = await fetch(
+        `//${serverUrl}/api/pay/paymed.php?${params.toString()}`,
+        {
+          method: 'GET',
+        }
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.status) {
+          alert('Куплено');
+        } else {
+          alert('Купить не удалось');
+        }
+      } else {
+        throw new Error('Ошибка при покупке');
+      }
+    } catch (error) { alert(`Ошибка: ${error.message}`);console.log(error.message);
+    } finally {}
+  };
+
+
     return (
       <>
        <Header />
@@ -134,12 +162,12 @@ export default function ProductPage() {
                     </>
                     )}
                 </div>
-                <button className="bt op">Купить в 1 клик</button>
+                <button className="bt op" onClick={payhandleClick}>Купить в 1 клик</button>
                 <div>
                   <h5>Часто задаваемые вопросы</h5>
                   <div className="duo">
-                    <Link to='#'>Как оплатить?</Link>
-                    <Link to='#'>Безопасность</Link>
+                    <Link to='/pay'>Как оплатить?</Link>
+                    <Link to='/banan'>Безопасность</Link>
                   </div>
                 </div>
               </div>
@@ -151,7 +179,7 @@ export default function ProductPage() {
                <RewsPanel />
                 <div className='postav'>
                   <h5>Информация о поставщике</h5>
-                  <p>{data.provname}</p>
+                  <p>{data.manager}</p>
                   <p className='mini'>{data.provdesc}</p>
                 </div>
               </div>

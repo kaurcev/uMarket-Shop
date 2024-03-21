@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import serverUrl from "../config";
+
+
 
 export default function Signup() {
   document.title = "Автооризация";
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  
   const usernameHandler = (event) => {
     setUsername(event.target.value);
   };
@@ -30,12 +31,11 @@ export default function Signup() {
     fetch(`//${serverUrl}/api/User/signup.php?${params.toString()}`)
       .then(response => response.json())
       .then(data => {
-        if (data.status) {
-          console.log(data.data.token);
-          localStorage.setItem('token', data.data.token);
+        if (data.data.status) {
+          alert("Теперь вы можете авторизироваться");
           navigate('/auth');
         } else {
-         // alert("Не работает");
+          alert("Не работает");
         }
       })
       .catch(error => {
@@ -46,7 +46,6 @@ export default function Signup() {
 
   return (
     <>
-    <Header />
     <main className="centered">
       {localStorage.getItem('token') ? (
         <>
@@ -57,11 +56,12 @@ export default function Signup() {
         <>
           <form className="login-form" onSubmit={submitHandler}>
             <h2>Регистрация</h2>
-            <p>Логин</p>
+            <p  className='mini'>Логин</p>
             <input type="text" value={username} onChange={usernameHandler} />
-            <p>Пароль</p>
+            <p className='mini'>Пароль</p>
             <input type="password" value={password} onChange={passwordHandler} />
             <p><button>Зарегистрироваться</button></p>
+            <p className='center'><Link to='/auth'>Уже есть аккаунт?</Link></p>
           </form>
         </>
       )}

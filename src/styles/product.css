@@ -78,6 +78,7 @@ main.product .duo{
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
+    min-width: 100%;
 }
 .product .rev{
     width: 100%;

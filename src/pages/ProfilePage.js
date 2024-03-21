@@ -9,7 +9,9 @@ import creditcard from '../img/creditcard.svg'
 const Profile = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
+  const [datat, setDatat] = useState([]);
   const [loading, setLoading] = useState(false);
+ 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,6 +26,9 @@ const Profile = () => {
         const jsonData = await response.json();
         setData(jsonData.data);
         window.scrollTo(0, 0);
+        if(!jsonData.status){
+          navigate('/logout')
+        }
       } catch (error) {
         console.log(error);
       } finally {
@@ -63,6 +68,24 @@ const Profile = () => {
       }
     );
   }
+  useEffect(() => {
+    const fetchDatar = async () => {
+      try {
+        setLoading(true);
+        const params = new URLSearchParams();
+        params.append('token', localStorage.getItem('token'));
+        const response = await fetch(`//${serverUrl}/api/user/trans.php?${params.toString()}`);
+        const jsonData = await response.json();
+        setDatat(jsonData.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDatar();
+  }, []); // Пустой массив зависимостей
 
   return (
     <>
@@ -115,6 +138,26 @@ const Profile = () => {
         <p className='mini'>ЮMoney не берёт коммисию. Её может взять банк</p>
         <button>Пополнить</button>
       </form>
+      </div>
+      <div className='transactions'>
+      {loading ? (
+              <>
+              { /* Тут заглушка, которая ожидает ответа от сервера*/}
+              Загружаем
+              </>
+              ) : (
+                datat.map((item) => (
+                  <div className="cart" key={item.id}>
+                    <div>
+                    <p className='mini'>Наименование операции</p>
+                    <p>{item.name}</p>
+                    <p className='mini'>Дата проведения операции</p>
+                    <p>{item.data}</p>
+                    </div>
+                    <p className='big'>{item.money}₽</p>
+              </div>
+                ))
+              )}
       </div>
       <h3>Место доставки</h3>
       <p className='mini'>Рекомендуется указывать Ваше домашнее положение</p>
