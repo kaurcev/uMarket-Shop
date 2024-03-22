@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import serverUrl from "../config";
 
 export default function ProdoAddPage() {
+  document.title = "Добавить товар";
   const [nameprodo, setNameprodo] = useState('');
   const [descriptionprodo, setDescriptionprodo] = useState('');
   const [costeprodo, setCosteprodo] = useState('');

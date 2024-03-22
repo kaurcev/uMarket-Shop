@@ -7,6 +7,7 @@ import iomoney from '../img/iomoney.svg'
 import creditcard from '../img/creditcard.svg'
 
 const Profile = () => {
+  document.title = "Ваш профиль";
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [datat, setDatat] = useState([]);

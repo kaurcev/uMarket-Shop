@@ -6,7 +6,7 @@ import serverUrl from "../config";
 
 
 export default function Signup() {
-  document.title = "Автооризация";
+  document.title = "Регистрация";
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

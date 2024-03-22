@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import serverUrl from "../config";
 
 export default function StockPage() {
+  document.title = "Информация о акции";
   const navigate = useNavigate();
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(false);

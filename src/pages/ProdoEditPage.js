@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import serverUrl from "../config";
 
 export default function ProdoEditPage() {
+  document.title = "Редактирование товара";
   const navigate = useNavigate();
   const [nameprodo, setNameprodo] = useState('');
   const [descriptionprodo, setDescriptionprodo] = useState('');

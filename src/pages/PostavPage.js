@@ -6,6 +6,7 @@ import serverUrl from "../config";
 import Prodoload from '../components/prodoload';
 
 export default function PostavPage(){
+  document.title = "Панель поставщика";
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [data1, setData1] = useState([]);

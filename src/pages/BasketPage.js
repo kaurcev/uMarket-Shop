@@ -6,7 +6,7 @@ import serverUrl from "../config";
 import '../styles/basket.css'
 
 export default function BasketPage() {
-  document.title = "Страница не найдена";
+  document.title = "Ваша корзина";
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
